@@ -1,0 +1,10 @@
+services:
+  bot:
+    build: .
+    container_name: telegram_weather_bot
+    environment:
+      - GEOAPIFY_API_KEY=${GEOAPIFY_API_KEY}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+    volumes:
+      - .:/app
+    restart: always
