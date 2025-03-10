@@ -3,6 +3,7 @@ services:
     build: .
     container_name: telegram_weather_bot
     environment:
+      - TZ=Europe/Moscow
       - GEOAPIFY_API_KEY=${GEOAPIFY_API_KEY}
       - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
     volumes:
